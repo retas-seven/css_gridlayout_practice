@@ -32,6 +32,55 @@ body {
 .post-head {
 	grid-column: 2 / -2;
 	grid-row: 1;
+
+	/* ヘッダーのグリッド */
+	display: grid;  
+	grid-template-columns: 75px 1fr 140px;
+	grid-template-rows: 45px repeat(3, auto);
+	grid-column-gap: 24px;
+	grid-row-gap: 12px;
+}
+
+/* ヘッダー：タイトル */
+.post-title {
+	grid-column: 2;
+	grid-row: 3;
+}
+
+/* ヘッダー：リード文 */
+.post-lead {
+	grid-column: 2;
+	grid-row: 4;
+}
+
+/* ヘッダー：シリーズ名 */
+.post-series {
+	grid-column: 1;
+	grid-row: 1 / 4;
+}
+
+/* ヘッダー：日付 */
+.post-date {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+/* ヘッダー：パンくずリスト */
+.post-bread {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+/* ヘッダー：カテゴリー */
+.post-category {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+/* ヘッダー：SNSメニュー */
+.post-sns {
+	grid-column: 3;
+	grid-row: 3;
 }
 
 /* セクション01 */

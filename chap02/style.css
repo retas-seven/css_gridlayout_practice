@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+/* デバッグ用 */
+/* 
+.post-head > * {
+	border: solid 1px #999
+}
+*/
+
 body {
 	margin: 0;
 	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
@@ -23,8 +30,10 @@ body {
 
 /* グリッド */
 .post {
+	--side: 20px;
 	display: grid;
-	grid-template-columns: 20px 1fr 50px 1fr 20px;
+	/* grid-template-columns: 20px 1fr 50px 1fr 20px; */
+	grid-template-columns: var(--side) 1fr 50px 1fr var(--side);
 	grid-template-rows: auto 30px auto 40px auto 30px auto;
 }
 
@@ -101,13 +110,6 @@ body {
 	list-style: none;
 }
 
-/* デバッグ用 */
-/* 
-.post-head > * {
-	border: solid 1px #999
-}
-*/
-
 .post-head a {
 	color: #000;
 	text-decoration: none;
@@ -174,6 +176,28 @@ body {
 	background-color: #dd4b39;
 }
 
+/* ヘッダー：区切り線 */
+.post-head:before {
+	grid-column: 1 / -1;
+	grid-row: 1;
+	align-self: end;
+	content: '';
+	border-top: solid 4px #222;
+	height: 2px;
+	border-bottom: solid 2px #222;
+	/* margin: 0 -20px; */
+	margin: 0 calc(var(--side) * -1) -4px;
+}
+
+/* ヘッダー：装飾画像 */
+.post-head:after{
+	grid-column: 3;
+	grid-row: 4;
+	justify-self: center;
+	align-self: center;
+	width: 80%;
+	content: url('img/gourmet.svg');
+}
 
 /* セクション01 */
 .sec01 {

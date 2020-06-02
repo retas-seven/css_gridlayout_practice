@@ -37,7 +37,9 @@ body {
 	grid-template-rows: auto 30px auto 40px auto 30px auto;
 }
 
+/* -------------------------- */
 /* ヘッダー */
+/* -------------------------- */
 .post-head {
 	grid-column: 2 / -2;
 	grid-row: 1;
@@ -199,25 +201,132 @@ body {
 	content: url('img/gourmet.svg');
 }
 
+/* -------------------------- */
 /* セクション01 */
+/* -------------------------- */
 .sec01 {
 	grid-column: 2 / -2;
 	grid-row: 3;
+
+	/* セクション01のグリッド */
+	display: grid;
+	grid-template-columns: 50% 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-column-gap: 25px;
+	grid-row-gap: 15px;
 }
 
+/* セクション01: 小見出し */
+.sec01 h2 {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+/* セクション01: 画像 */
+.sec01 figure {
+	grid-column: 1;
+	grid-row: 1 / -1;
+}
+
+/* セクション01: 文章 */
+.sec01 p {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+/* セクション01: ショップ情報 */
+.sec01 .shop {
+	grid-column: 2;
+	grid-row: 3;
+}
+
+/* -------------------------- */
 /* セクション02 */
+/* -------------------------- */
 .sec02 {
 	grid-column: 2;
 	grid-row: 5;
+
+	/* セクション02のグリッド */
+	display: grid;
+	grid-template-columns: 4fr 5fr;
+	grid-template-rows: auto 1fr auto auto;
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
 }
 
+/* セクション02: 小見出し */
+.sec02 h2 {
+	grid-column: 1 / -1;
+	grid-row: 1;
+}
+
+/* セクション02: 画像01 */
+.sec02 .fig01 {
+	grid-column: 1;
+	grid-row: 2 / 4;
+}
+
+/* セクション02: 画像02 */
+.sec02 .fig02 {
+	grid-column: 2;
+	grid-row: 3;
+}
+
+/* セクション02: 文章 */
+.sec02 p {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+/* セクション02: ショップ情報 */
+.sec02 .shop {
+	grid-column: 1 / -1;
+	grid-row: 4;
+}
+
+
+/* -------------------------- */
 /* セクション03 */
+/* -------------------------- */
 .sec03 {
 	grid-column: 4;
 	grid-row: 5;
+
+	/* セクション03のグリッド */
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto 1fr auto;
+	grid-row-gap: 15px;
 }
 
+/* セクション03: 小見出し */
+.sec03 h2 {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+/* セクション03: 画像 */
+.sec03 figure {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+/* セクション03: 文章 */
+.sec03 p {
+	grid-column: 1;
+	grid-row: 3;
+}
+
+/* セクション03: ショップ情報 */
+.sec03 .shop {
+	grid-column: 1;
+	grid-row: 4;
+}
+
+/* -------------------------- */
 /* フッター */
+/* -------------------------- */
 .post-foot {
 	grid-column: 1 / -1;
 	grid-row: -2;

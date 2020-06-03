@@ -37,6 +37,42 @@ body {
 	grid-template-rows: auto 30px auto 40px auto 30px auto;
 }
 
+/* セクション（共通） */
+.sec h2 {
+	font-family: 'MPLUS 1p', sans-serif;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+.sec p {
+	font-size: 14px;
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+.sec .spot {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	border: solid 1px #aaa;
+	border-radius: 50%;
+	box-sizing: border-box;
+	display: block;
+	width: 3.75em;
+	height: 3.75em;
+	line-height: 3.75em;
+}
+.sec .num {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 78px;
+	font-weight: 300;
+	line-height: 1;
+	padding-right: 7px;
+}
+/* .sec .num:after {
+	content: ' ';
+} */
+
 /* -------------------------- */
 /* ヘッダー */
 /* -------------------------- */
@@ -227,6 +263,10 @@ body {
 	grid-column: 1;
 	grid-row: 1 / -1;
 }
+.sec01 figure img {
+	height: 100%;
+	object-fit: cover;
+}
 
 /* セクション01: 文章 */
 .sec01 p {
@@ -265,12 +305,18 @@ body {
 .sec02 .fig01 {
 	grid-column: 1;
 	grid-row: 2 / 4;
+	margin-bottom: 40px;
+}
+.sec02 .fig01 img {
+	height: 100%;
+	object-fit: cover;
 }
 
 /* セクション02: 画像02 */
 .sec02 .fig02 {
 	grid-column: 2;
 	grid-row: 3;
+	margin-left: -40px;
 }
 
 /* セクション02: 文章 */

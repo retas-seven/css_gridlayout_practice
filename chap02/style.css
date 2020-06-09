@@ -489,6 +489,24 @@ body {
 }
 
 /* -------------------------- */
+/* セクションを区切る点線 */
+/* -------------------------- */
+.post::before	{
+	grid-column: 2 / -2;
+	grid-row: 4;
+	align-self: center;
+	content: '';
+	border-top: dotted 6px #ddd;
+}
+.post::after	{
+	grid-column: 3;
+	grid-row: 5;
+	justify-self: center;
+	content: '';
+	border-left: dotted 6px #ddd;
+}
+
+/* -------------------------- */
 /* フッター */
 /* -------------------------- */
 .post-foot {

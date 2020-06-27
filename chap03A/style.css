@@ -17,3 +17,31 @@ body {
 .orange-sub img {
 	max-width: 120px;
 }
+
+/* グリッド */
+.orange	{
+	--side: 20px;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-row-gap: 30px;
+	margin: 0 var(--side) 30px;
+}
+
+/* 大きい画像 */
+.orange-photo {
+	grid-column: 1 / -1;
+	grid-row: 1;
+}
+
+/* テキスト */
+.orange-text {
+	grid-column: span 5 / -1;
+	grid-row: 1;
+}
+
+/* サブ情報 */
+.orange-sub {
+	grid-column: 1 / span 6;
+	grid-row: 2;
+}

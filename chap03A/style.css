@@ -5,20 +5,26 @@ body {
 	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
 }
 
+/* ------------------------------------- */
 /* 基本 */
+/* ------------------------------------- */
 .orange * {
 	margin: 0;
 }
+
 .orange img	{
 	width: 100%;
 	height: auto;
 	vertical-align: bottom;
 }
+
 .orange-sub img {
 	max-width: 120px;
 }
 
+/* ------------------------------------- */
 /* グリッド */
+/* ------------------------------------- */
 .orange	{
 	--side: 20px;
 	display: grid;
@@ -26,22 +32,75 @@ body {
 	grid-template-rows: repeat(2, auto);
 	grid-row-gap: 30px;
 	margin: 0 var(--side) 30px;
+	font-family: 'Noto Sans Japanese', sans-serif;
 }
 
+/* ------------------------------------- */
 /* 大きい画像 */
+/* ------------------------------------- */
 .orange-photo {
 	grid-column: 1 / -1;
 	grid-row: 1;
+	margin: 0 calc( var(--side) * -1 );
 }
 
+.orange-photo img {
+	height: 100%;
+	object-fit: cover;
+}
+
+/* ------------------------------------- */
 /* テキスト */
+/* ------------------------------------- */
 .orange-text {
 	grid-column: span 5 / -1;
 	grid-row: 1;
+	justify-self: center;
+	align-self: center;
+	z-index: 10;
+	padding: 40px 0;
+	color: #fff;
+	writing-mode: vertical-rl;
+	text-shadow: 0px 0px 20px #000;
+
+	/* テキストのグリッド */
+	display: grid;
+	grid-row-gap: 15px;
+	justify-items: end;
 }
 
+.orange-text h2 {
+	padding-bottom: 20px;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 1.5;
+}
+
+.orange-text p {
+	height: 18em;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.8;
+}
+
+/* ------------------------------------- */
 /* サブ情報 */
+/* ------------------------------------- */
 .orange-sub {
 	grid-column: 1 / span 6;
 	grid-row: 2;
+
+	/* サブ情報のグリッド */
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 10px;
 }
+
+.orange-sub p {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+
+
+

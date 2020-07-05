@@ -12,8 +12,7 @@ body {
 	margin: 0;
 }
 
-.orange img	{
-	width: 100%;
+.orange img	{	width: 100%;
 	height: auto;
 	vertical-align: bottom;
 }
@@ -47,6 +46,7 @@ body {
 .orange-photo img {
 	height: 100%;
 	object-fit: cover;
+	max-height: 600px;
 }
 
 /* ------------------------------------- */
@@ -101,6 +101,28 @@ body {
 	line-height: 1.5;
 }
 
+/* ------------------------------------- */
+/* ####### 画面の横幅767ピクセル以下 ####### */
+/* ------------------------------------- */
+@media (max-width: 767px) {
 
+	.orange-text {
+		justify-self: end;
+	}
 
+	.orange-sub {
+		grid-column: 1 / -1;
+	}
 
+	/* .orange-photo img {
+		filter: brightness(60%);
+	} */
+
+	.orange::after {
+		grid-column: 1 / -1;
+		grid-row: 1;
+		margin: 0 calc( var(--side) * -1 );
+		content: '';
+		background-color: rgba(0,0,0,0.4);
+		
+	}
